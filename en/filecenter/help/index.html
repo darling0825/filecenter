@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="FE文件管理器,Skyjos,smb,app,Android"/>
+  <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
+  <title>FE文件管理器 - Skyjos</title>
+  
+  <link rel="stylesheet" href="../../../javascript/jquery/jquery.mobile-1.4.5.min.css">
+  <script src="../../../javascript/jquery/jquery-1.11.2.min.js"></script>
+  <script src="../../../javascript/jquery/jquery.mobile-1.4.5.min.js"></script>
+
+  <style type="text/css">
+    #section {margin:0px 0px 20px 0px;}
+    .guide_img {margin-top:10px; margin-bottom:10px; max-width:90%; height:auto;}
+  
+  .jqm-logo {
+    margin: 0 3em;
+  }
+  .jqm-copyright {
+    padding: 1em 1em;
+  }
+  .jqm-navmenu-link {
+    vertical-align:middle;
+  }
+  .ui-btn-icon-notext.ui-btn-left {
+      top: .5em;
+      left: .5em;
+  }
+  </style>
+
+  <script type="text/javascript">
+  function getUrlParam(name) {
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r!=null) return unescape(r[2]); return null;
+  }
+
+  function showHelp(helpId) {
+    if (helpId == "setup_connection") {
+      helpId = "setup_connection_device";
+    }
+    var url = helpId + ".html";
+    $('#sub_contents_in').load(url);
+  }
+
+  $( document ).on( "pagecreate", ".jqm-help", function( event ) {
+    var page = $( this );
+    $( ".jqm-navmenu-panel ul" ).listview();
+    $( ".jqm-navmenu-link" ).on( "click", function() {
+      page.find( ".jqm-navmenu-panel:not(.jqm-panel-page-nav)" ).panel( "open" );
+    });
+  });
+
+  $(document).on("pagechange",function(event,data){
+    var sectionName = getUrlParam('section');
+  if (sectionName == null) {
+    sectionName = "overview";
+  }
+    showHelp(sectionName);
+  });
+  </script>
+
+</head>
+<body>
+  <div data-role="page" class="jqm-help">
+
+    <div data-role="header">
+    <div><a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a></div>
+      <div class="jqm-logo"><a href="#" class="jqm-navmenu-link ui-btn ui-corner-all">用户手册</a></div>
+    </div><!-- /header -->
+
+    <div data-role="content">
+      <div id="sub_contents_in" class="sub_contents_in">
+      </div>
+    </div><!-- /content -->
+
+    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay">
+      <ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+    <li id='overview' data-icon="home"><a href="help_device.php?section=overview" rel="external">概述</a></li>
+        <li id='file_management'><a href="help_device.php?section=file_management" rel="external">文件管理</a></li>
+    <li id='smb_transfer'><a href="help_device.php?section=smb_transfer" rel="external">文件传输</a></li>
+    <li id='doc_editing'><a href="help_device.php?section=doc_editing" rel="external">文档编辑</a></li>
+    <li id='airplay'><a href="help_device.php?section=airplay" rel="external">AirPlay到Apple TV</a></li>
+    <li id='setup_connection'><a href="help_device.php?section=setup_connection" rel="external">设置连接</a></li>
+    <li id='manage_connections'><a href="help_device.php?section=manage_connections" rel="external">管理连接</a></li>
+        <li id='settings_mac'><a href="help_device.php?section=settings_mac" rel="external">macOS设置</a></li>
+    <li id='settings_win10'><a href="help_device.php?section=settings_win10" rel="external">Windows 10设置</a></li>
+        <li id='settings_win7'><a href="help_device.php?section=settings_win7" rel="external">Windows 7/8设置</a></li>
+        <li id='settings_winxp'><a href="help_device.php?section=settings_winxp" rel="external">Windows XP设置</a></li>
+    <li id='settings_tc'><a href="help_device.php?section=settings_tc" rel="external">Time Capsule设置</a></li>
+    <li id='configurations'><a href="help_device.php?section=configurations" rel="external">分发配置</a></li>
+    <li id='built-in_ftp_server'><a href="help_device.php?section=built-in_ftp_server" rel="external">内置FTP服务器·</a></li>
+    <li id='itunes_file_sharing'><a href="help_device.php?section=itunes_file_sharing" rel="external">iTunes文件共享</a></li>
+    <li id='device_transfer'><a href="help_device.php?section=device_transfer" rel="external">附近文件传输</a></li>
+    <li id='sync_files'><a href="help_device.php?section=sync_files" rel="external">文件同步</a></li>
+      </ul>
+    </div><!-- /panel -->
+
+    <div data-role="header">
+      <div><a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a></div>
+    <div class="jqm-logo"><a href="#" class="jqm-navmenu-link ui-btn ui-corner-all">用户手册</a></div>
+    </div><!-- /footer -->
+  
+  <div class="jqm-copyright"><font color="gray">&#169; 2018 Skyjos Co., Ltd.</font></div>
+  
+  </div><!-- /page -->
+
+</body>
+
+</html>
