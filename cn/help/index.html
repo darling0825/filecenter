@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="FE文件管理器,Skyjos,smb,app,Android"/>
+  <meta name="description" content="文件助手 - 文件管理"/>
   <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0">
-  <title>FE文件管理器 - Skyjos</title>
+  <title>文件助手</title>
   
   <link rel="stylesheet" href="../../javascript/jquery/jquery.mobile-1.4.5.min.css">
   <script src="../../javascript/jquery/jquery-1.11.2.min.js"></script>
@@ -37,9 +37,6 @@
   }
 
   function showHelp(helpId) {
-    if (helpId == "setup_connection") {
-      helpId = "setup_connection_device";
-    }
     var url = helpId + ".html";
     $('#sub_contents_in').load(url);
   }
@@ -80,7 +77,7 @@
     <li id='overview' data-icon="home"><a href="index.html?section=overview" rel="external">概述</a></li>
         <li id='file_management'><a href="index.html?section=file_management" rel="external">文件管理</a></li>
     <li id='smb_transfer'><a href="index.html?section=smb_transfer" rel="external">文件传输</a></li>
-    <li id='doc_editing'><a href="index.html?section=doc_editing" rel="external">文档编辑</a></li>
+    <li id='usb_transfer'><a href="index.html?section=usb_transfer" rel="external">USB传输</a></li>
     <li id='airplay'><a href="index.html?section=airplay" rel="external">AirPlay到Apple TV</a></li>
     <li id='setup_connection'><a href="index.html?section=setup_connection" rel="external">设置连接</a></li>
     <li id='manage_connections'><a href="index.html?section=manage_connections" rel="external">管理连接</a></li>
@@ -102,7 +99,7 @@
     <div class="jqm-logo"><a href="#" class="jqm-navmenu-link ui-btn ui-corner-all">用户手册</a></div>
     </div><!-- /footer -->
   
-  <div class="jqm-copyright"><font color="gray">&#169; 2018 Skyjos Co., Ltd.</font></div>
+  <div class="jqm-copyright"><font color="gray">&#169; Copyright © 2019 Liweiwei. All rights reserved.</font></div>
   
   </div><!-- /page -->
 
