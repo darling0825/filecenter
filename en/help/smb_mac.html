@@ -1,72 +1,47 @@
 
 <div id="section">
 	<div>
-		<font size="4" color="blue">打开文件共享</font>
+		<font size="4" color="blue">Open File Sharing</font>
 	</div>
 	<div>
-		1. 打开‘系统偏好设置’程序<br/> 
-		2. 点击 '共享' <br/>
-		<image src="mac_share_1.png" style="max-width:90%;height:auto;"/> <br/>
-		3. 从左边的 '服务' 中选择 ‘文件共享'. <br/><br/>
-		注意: 如果你设置后不能连接Mac, 请重新启动文件共享服务或Mac. <br/>
-	</div>
-</div>
-
-<div id="section">
-	<div>
-		<font size="4" color="blue">共享文件夹</font>
-	</div>
-	<div>
-		1. 在 '共享文件夹' 中点击 + <br/>
-		2. 选择需要共享的文件夹，点击 '添加'<br/>
-		3. 缺省设置所有人仅有只读权限 ('Everyone'). 为了能够更改文件，需要点击 ‘用户’ 上的 + 按钮，然后添加你的账号. 修改 '只读' 为 '读写'.<br/>
-		<image src="mac_share_2.png" style="max-width:90%;height:auto;"/> <br/>
-		4. 点击 "选项..." 按钮, 选择 “使用SMB共享文件和文件夹”，选择你的账户允许访问。<br/>
-		<image src="mac_share_3.png" style="max-width:90%;height:auto;"/> <br/>
+		1. Click "System Preferences" --> "Sharing". As shown below:<br/> 
+		<image src="img/smb_mac_00.png" style="max-width:90%;height:auto;"/> <br/>
+		2. Select "File Sharing" from the service box on the left.<br/>
+		3. In the "Shared Folders:" section, you can add or remove folders to share.<br/>
+		4. In the "Users:" section, you can modify the sharing permissions. As shown below:<br/>
+		<image src="img/smb_mac_01.png" style="max-width:90%;height:auto;"/> <br/>
+		5. Click "Options..." to open the sharing settings and check "Share files and folders using SMB".<br/> 
+		6. In the account box below, you can choose which user to enable the SMB service for. As shown below:<br/>
+		<image src="img/smb_mac_02.png" style="max-width:90%;height:auto;"/> <br/>
 	</div>
 </div>
 
-<div id="section">
-	<div>
-		<font size="4" color="blue">关于iCloud 密码 (Apple ID)</font>
-	</div>
-	<div>
-		如果你使用iCloud password(Apple ID) to 访问你的 Mac, 这个账号不能访问共享文件夹. <br/>
-		<image src="mac_share_4.png" style="max-width:90%;height:auto;"/> <br/>
-		为了能够访问共享文件夹，需要创建独立的密码。<br/>
-		1. 在 ‘系统偏好设置’ 中打开 ‘用户与群组’。<br/>
-		2. 在左边选择你的账号。<br/>
-		3. 点击 "更改密码"。<br/>
-		4. 点击 "使用独立密码".<br/>
-		<image src="mac_share_5.png" style="max-width:90%;height:auto;"/> <br/>
-	</div>
-</div>
+<br/>
 
 <div id="section">
 	<div>
-		<font size="4" color="blue">配置Mac防火墙</font>
+		<font size="4" color="blue">Firewall Settings</font>
 	</div>
 	<div>
-		通过FileExplorer你可以连接Mac。如果你不能连接，可能是Mac的防火墙阻塞了网络连接。<br/>
-		请按照以下方式设置防火墙。<br/>
-		1. 在 ‘系统偏好设置’ 中打开 ‘安全与隐私’。<br/>
-		2. 点击 "防火墙".<br/>
-		3. 点击左下角的锁标志解锁。<br/>
-		4. 点击 "防火墙选项"<br/>
-		5. 确认不要选择"阻止所有传入链接"<br/>
+		If you can't connect, it's possible that the Mac's firewall is blocking the network connection. Please set up the firewall as follows.<br/>
+		1. Click "System Preferences" --> "Security & Privacy" --> "Firewall".<br/>
+		2. Click the lock symbol in the lower left corner to unlock it.<br/>
+		3. You can choose to "Turn Off the Firewall" or click on "Firewall Options...".<br/>
+		4. Be sure not check "Block all incoming connects". As shown below:<br/>
+		<image src="img/smb_mac_03.png" style="max-width:90%;height:auto;"/> <br/>
 	</div>
 </div>
 
+<br/>
+
 <div id="section">
 	<div>
-		<font size="4" color="blue">问答</font>
+		<font size="4" color="blue">Add a user for file sharing</font>
 	</div>
 	<div>
-		Q. 在访问共享文件夹时遇到 "unknown host" 或者 "timed out" 错误，我该怎么办？ <br/>
-		A. 有两个方法可以进行尝试<br/>
-		1. 使用Mac电脑的IP 地址进行连接，不要使用机器名称<br/>
-		<image src="qa_ip.jpg" style="max-width:90%;height:auto;"/> <br/>
-		2. 重启Mac电脑的文件共享服务。先取消 ‘文件共享’ 然后再重新打开，来重启共享服务。<br/>
-		<image src="mac_qa_restart_service.jpg" style="max-width:90%;height:auto;"/> <br/>
+		1. Click "System Preferences" --> "Users &Groups".<br/>
+		2. Click the lock symbol in the lower left corner to unlock it.<br/>
+		3. Click the "+" to add users, and to select "sharing only" for the "New Account". As shown below:<br/>
+		<image src="img/smb_mac_04.png" style="max-width:90%;height:auto;"/> <br/>
 	</div>
 </div>
